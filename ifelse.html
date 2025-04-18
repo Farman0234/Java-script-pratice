@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let lang = prompt("Enter 1 talk in English Enter 2 talk in urdu");
+
+      while (lang != 2 && lang != 1) {
+        a = prompt("Incorret number Enter please try again");
+      }
+      if (lang === "1") {
+        console.log("Talk in English");
+      } else if (lang === "2") {
+        console.log("Talk in Urdu");
+      }
+
+      let b = prompt("lease enter a number between 3 to 7");
+
+      while (b != 3 && b != 4 && b != 5 && b != 6 && b != 7) {
+        b = prompt("Invalid number. Please enter a number between 3 to 7");
+      }
+
+      if (b == 3) {
+        console.log(" Balance information");
+      } else if (b == 4) {
+        console.log("Account information");
+      } else if (b == 5) {
+        console.log("Atm card activate or Block");
+      } else if (b == 6) {
+        console.log("Zakat inforamtion");
+      } else if (b == 7) {
+        console.log("Coustome information");
+      } else {
+        console.log("You Pressed Invalid Number");
+      }
+    </script>
+  </body>
+</html>

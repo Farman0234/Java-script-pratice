@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let Balance = 100000;
+
+      let lang = prompt("Select language:1 Englsh & 2: urdu ");
+      while (lang != "1" && lang !== "2") {
+        lang = prompt("invalid entery Please select 1 english & 2 Urdu");
+      }
+      if (lang == 1) {
+        console.log("English Language");
+      } else if (lang == 2) {
+        console.log("Urdu Language");
+      }
+
+      let option;
+      do {
+        option = prompt(
+          "Welcome to ATM!" +
+            "1. Balance Check" +
+            "2. Withdraw Money" +
+            "3. Deposit Money" +
+            "4. Zakat Information" +
+            "5. Exit" +
+            "Please enter your option:"
+        );
+        // Balance Check
+
+        if (option == 1) {
+          console.log("Your Current Balance ", +Balance);
+        //  Withdraw Money
+
+        } else if (option == 2) {
+          let Withdraw = Number(prompt("Enter A Number"));
+          if (Withdraw > 0 && Withdraw <= Balance) {
+            Balance -= Withdraw;
+            console.log("withdrawal Successfull! Reaming balance " + Balance);
+          } else {
+            console.log("Invalid amount Insufficent Balance");
+        }
+        // Deposit Money
+
+        } else if (option == 3) {
+          let depositMoney = Number(prompt("Enter deposit Amount "));
+          if (depositMoney > 0) {
+            Balance += depositMoney;
+            console.log("depost successfull ! current " + Balance);
+          }
+        //  Zakat Information
+
+        } else if (option == 4) {
+          let zakat = Balance * 0.025;
+          console.log("your Zakat amount " + zakat);
+
+        //Exit
+
+        } else if (option == 5) {
+          console.log("Thank you for using the ATM. God By");
+        //Invalid Option 
+        } else {
+          console.log("Invalid option selected.");
+        }
+      } while (option !== "5");
+
+    </script>
+  </body>
+</html>
