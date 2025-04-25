@@ -8,13 +8,16 @@
 <body>
     <script>
         let guessNumber = Number(prompt("Enter A Number"))
-        if (guessNumber == 5){
+
+        if (guessNumber %5 == 0){
             console.log("your are Win")
             for (let i = 0 ; i <= 10; i++) {
                 console.log("Your are win", i);}
         }else
         {
             console.log("Your are loss")
+            for (let i = 0 ; i <= 10; i++) {
+                console.log("Your are Losser", i);}
         }
     </script>
 </body>

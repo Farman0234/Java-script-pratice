@@ -6,11 +6,14 @@
     <title>Document</title>
   </head>
   <body>
+  
     <script>
+      //Atm Meachine//
+
       let Balance = 100000;
 
       let lang = prompt("Select language:1 Englsh & 2: urdu ");
-      while (lang != "1" && lang !== "2") {
+      while (lang != 1 && lang != 2) {
         lang = prompt("invalid entery Please select 1 english & 2 Urdu");
       }
       if (lang == 1) {
@@ -18,6 +21,17 @@
       } else if (lang == 2) {
         console.log("Urdu Language");
       }
+
+      let pasw = Number(prompt("Enter your Pasword"))
+      while (pasw != 5400) {
+        pasw= prompt("Your Enter a invalid Pasword");
+      }
+      if (pasw != 5400 ){
+          console.log("Hi Farman")
+      }else {
+        console.log("YOUR ENTER A INVALID PASWORD")
+      }
+
 
       let option;
       do {
@@ -48,7 +62,7 @@
 
         } else if (option == 3) {
           let depositMoney = Number(prompt("Enter deposit Amount "));
-          if (depositMoney > 0) {
+          if (depositMoney > 0 ) {
             Balance += depositMoney;
             console.log("depost successfull ! current " + Balance);
           }
@@ -61,7 +75,8 @@
         //Exit
 
         } else if (option == 5) {
-          console.log("Thank you for using the ATM. God By");
+          console.log("Thank you for using the ATM. Good By");
+          
         //Invalid Option 
         } else {
           console.log("Invalid option selected.");
